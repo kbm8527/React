@@ -1,0 +1,13 @@
+.App {
+}
+.App ul {
+  overflow: hidden;
+}
+.App ul > li {
+  float: left;
+}
+.App > div {
+  width: 900px;
+  height: 1000px;
+  margin: 0 auto;
+}
