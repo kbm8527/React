@@ -9,25 +9,25 @@ class EventClassCompo extends Component {
   };
 
   // 이벤트 핸들러 정의
-  // 기본 자바스트립트 함수
+  // 기본 자바스크립트 함수
   onClickHandler1 = function () {
-    alert('핸들러 버튼 1 클릭');
+    alert('핸들러 버튼1 클릭');
   };
-  // 기본 자바스트립트 익명함수
+  // 자바스크립트 익명함수
   onClickHandler2 = function () {
-    alert('핸들러 버튼 2 클릭');
+    alert('핸들러 버튼2 클릭');
   };
   // 타입스크립트 화살표함수
   onClickHandler3 = () => {
-    alert('핸들러 버튼 3 클릭');
+    alert('핸들러 버튼3 클릭');
   };
 
   render() {
     return (
       <div className="EventClassCompo">
         <em>EventClassCompo</em>
-        {/* onClick 이벤트  this = class 지시자*/}
-        <h1 style={{ color: this.setState.color1 }}>React Click Event</h1>
+        {/* onClick 이벤트 */}
+        <h1 style={{ color: this.state.color1 }}>React Click Event</h1>
         <button
           onClick={() => {
             alert('기본클릭');
@@ -45,35 +45,31 @@ class EventClassCompo extends Component {
         >
           이벤트 객체
         </button>
-
         <button
           onClick={() => {
-            this.setState({ color1: '#00f' });
+            this.setState({ color1: '#f00' });
           }}
         >
           색상 변경
         </button>
-
         <button onClick={this.onToggleColor}>색상 토글</button>
-
         {/* onMouseOver, onMouseOut 이벤트 */}
         <h1
           style={{ color: this.state.color2 }}
           onMouseOver={() => {
             this.setState({ color2: 'orange' });
           }}
-          onMouseOut={() => this.setState({ color2: 'green' })}
+          onMouseOut={() => {
+            this.setState({ color2: 'green' });
+          }}
         >
           마우스오버, 마우스아웃
         </h1>
-
-        {/* onChange이벤트 */}
+        {/* onChange 이벤트 */}
         <input
           type="text"
           onChange={(e) => {
             //console.log(e.target.value);
-            // setMsg(e.target.value);
-
             this.setState({ msg: e.target.value });
           }}
         />
