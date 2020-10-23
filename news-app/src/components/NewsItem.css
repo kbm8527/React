@@ -1,0 +1,25 @@
+.NewsItem {
+  display: flex;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.NewsItem > .thumbnail {
+}
+
+.NewsItem > .thumbnail img {
+  width: 160px;
+  height: 100px;
+}
+
+.NewsItem > .contents {
+  margin-left: 10px;
+}
+
+.NewsItem > .contents h2 {
+  margin: 0;
+}
+
+.NewsItem > .contents a {
+  color: #111;
+}
